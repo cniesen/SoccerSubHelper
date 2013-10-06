@@ -107,8 +107,11 @@ public class Main {
     }
 
     private static void printGameSubstitutionList(Game game) {
-        int numberOfPlayers = game.getGameSupstitutions().get(0).size();
-        int numberOfPeriods = game.getGameSupstitutions().size();
+        int numberOfPlayers = game.getGameSubstitutions().get(0).size();
+        int numberOfPeriods = game.getGameSubstitutions().size();
+
+        System.out.println(game.getPlayers().size() + " players (swap every " + game.getSubstitutionTimeMinutes() + " minutes)");
+        System.out.println();
 
         for (int column=0; column < numberOfPeriods; column++) {
             System.out.format(" %1$-15s ", column * game.getSubstitutionTimeMinutes());
@@ -128,7 +131,7 @@ public class Main {
 
         for (int row=0; row < numberOfPlayers; row++) {
             for (int column=0; column < numberOfPeriods; column++) {
-                System.out.format(" %1$-15s ", game.getGameSupstitutions().get(column).get(row).getName());
+                System.out.format(" %1$-15s ", game.getGameSubstitutions().get(column).get(row).getName());
                 if(column == (numberOfPeriods / 2) - 1) {
                     System.out.print("|");
                 }

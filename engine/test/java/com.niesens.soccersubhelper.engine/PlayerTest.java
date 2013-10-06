@@ -12,6 +12,29 @@ import static org.junit.Assert.assertTrue;
 public class PlayerTest {
 
     @Test
+    public void testNameComparator() {
+        Player player1 = new Player("Albert");
+        Player player2 = new Player("Albert");
+        Player player3 = new Player("Beate");
+
+        int result = Player.NameComparator.compare(player1, player2);
+        assertEquals(0, result);
+
+        result = Player.NameComparator.compare(player1, player3);
+        assertTrue(result < 0);
+
+        result = Player.NameComparator.compare(player3, player1);
+        assertTrue(result > 0);
+
+        List<Player> players = new ArrayList<Player>();
+        players.add(player1);
+        players.add(player3);
+        players.add(player2);
+        Collections.sort(players, Player.NameComparator);
+        assertEquals("Beate", players.get(2).getName());
+    }
+
+    @Test
     public void testPlayTimeComparator() {
         Player player1 = new Player("player1");
         player1.setPlayTimeMinutes(5);
@@ -24,10 +47,10 @@ public class PlayerTest {
         assertEquals(0, result);
 
         result = Player.PlayTimeComparator.compare(player1, player3);
-        assertTrue(result <= -1);
+        assertTrue(result < 0);
 
         result = Player.PlayTimeComparator.compare(player3, player1);
-        assertTrue(result >= 1);
+        assertTrue(result > 0);
 
         List<Player> players = new ArrayList<Player>();
         players.add(player1);

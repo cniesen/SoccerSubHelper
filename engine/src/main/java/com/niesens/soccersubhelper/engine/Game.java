@@ -69,9 +69,27 @@ public class Game {
     }
 
     private void buildGameSubstitutionsU6With5Players() {
+        gameSubstitutions.add(new ArrayList<Player>(Arrays.asList(players.get(2), players.get(3), players.get(4))));
+        gameSubstitutions.add(new ArrayList<Player>(Arrays.asList(players.get(0), players.get(1), players.get(2))));
+        gameSubstitutions.add(new ArrayList<Player>(Arrays.asList(players.get(1), players.get(3), players.get(4))));
+        gameSubstitutions.add(new ArrayList<Player>(Arrays.asList(players.get(0), players.get(2), players.get(3))));
+
+        gameSubstitutions.add(new ArrayList<Player>(Arrays.asList(players.get(0), players.get(1), players.get(4))));
+        gameSubstitutions.add(new ArrayList<Player>(Arrays.asList(players.get(1), players.get(2), players.get(3))));
+        gameSubstitutions.add(new ArrayList<Player>(Arrays.asList(players.get(0), players.get(3), players.get(4))));
+        gameSubstitutions.add(new ArrayList<Player>(Arrays.asList(players.get(1), players.get(2), players.get(4))));
     }
 
     private void buildGameSubstitutionsU6With6Players() {
+        gameSubstitutions.add(new ArrayList<Player>(Arrays.asList(players.get(0), players.get(1), players.get(2))));
+        gameSubstitutions.add(new ArrayList<Player>(Arrays.asList(players.get(3), players.get(4), players.get(5))));
+        gameSubstitutions.add(new ArrayList<Player>(Arrays.asList(players.get(0), players.get(1), players.get(3))));
+        gameSubstitutions.add(new ArrayList<Player>(Arrays.asList(players.get(2), players.get(4), players.get(5))));
+
+        gameSubstitutions.add(new ArrayList<Player>(Arrays.asList(players.get(0), players.get(4), players.get(5))));
+        gameSubstitutions.add(new ArrayList<Player>(Arrays.asList(players.get(1), players.get(2), players.get(3))));
+        gameSubstitutions.add(new ArrayList<Player>(Arrays.asList(players.get(1), players.get(4), players.get(5))));
+        gameSubstitutions.add(new ArrayList<Player>(Arrays.asList(players.get(0), players.get(2), players.get(3))));
     }
 
     private void buildGameSubstitutionsU8() {
@@ -92,14 +110,22 @@ public class Game {
     }
 
     private void buildGameSubstitutionsU8With5Players() {
+        gameSubstitutions.add(new ArrayList<Player>(Arrays.asList(players.get(0), players.get(1), players.get(2), players.get(3))));
+        gameSubstitutions.add(new ArrayList<Player>(Arrays.asList(players.get(1), players.get(2), players.get(3), players.get(4))));
+        gameSubstitutions.add(new ArrayList<Player>(Arrays.asList(players.get(0), players.get(2), players.get(3), players.get(4))));
+        gameSubstitutions.add(new ArrayList<Player>(Arrays.asList(players.get(0), players.get(1), players.get(3), players.get(4))));
+        gameSubstitutions.add(new ArrayList<Player>(Arrays.asList(players.get(0), players.get(1), players.get(2), players.get(4))));
+        gameSubstitutions.add(new ArrayList<Player>(Arrays.asList(players.get(0), players.get(1), players.get(2), players.get(3))));
+        gameSubstitutions.add(new ArrayList<Player>(Arrays.asList(players.get(1), players.get(2), players.get(3), players.get(4))));
+        gameSubstitutions.add(new ArrayList<Player>(Arrays.asList(players.get(0), players.get(2), players.get(3), players.get(4))));
     }
 
     private void buildGameSubstitutionsU8With6Players() {
         gameSubstitutions.add(new ArrayList<Player>(Arrays.asList(players.get(2), players.get(3), players.get(4), players.get(5))));
         gameSubstitutions.add(new ArrayList<Player>(Arrays.asList(players.get(0), players.get(1), players.get(4), players.get(5))));
         gameSubstitutions.add(new ArrayList<Player>(Arrays.asList(players.get(0), players.get(1), players.get(2), players.get(3))));
-        gameSubstitutions.add(new ArrayList<Player>(Arrays.asList(players.get(1), players.get(3), players.get(4), players.get(5))));
         gameSubstitutions.add(new ArrayList<Player>(Arrays.asList(players.get(0), players.get(2), players.get(3), players.get(5))));
+        gameSubstitutions.add(new ArrayList<Player>(Arrays.asList(players.get(1), players.get(3), players.get(4), players.get(5))));
         gameSubstitutions.add(new ArrayList<Player>(Arrays.asList(players.get(0), players.get(1), players.get(2), players.get(4))));
         gameSubstitutions.add(new ArrayList<Player>(Arrays.asList(players.get(0), players.get(1), players.get(3), players.get(5))));
         gameSubstitutions.add(new ArrayList<Player>(Arrays.asList(players.get(0), players.get(2), players.get(3), players.get(4))));
@@ -130,8 +156,12 @@ public class Game {
     public AgeGroup getAgeGroup() {
         return ageGroup;
     }
+
+    public List<Player> getPlayers() {
+        return players;
+    }
     
-    public List<List<Player>> getGameSupstitutions() {
+    public List<List<Player>> getGameSubstitutions() {
         return gameSubstitutions;
     }
 

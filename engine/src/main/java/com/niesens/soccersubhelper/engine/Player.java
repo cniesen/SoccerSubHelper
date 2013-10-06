@@ -3,12 +3,10 @@ package com.niesens.soccersubhelper.engine;
 import org.apache.commons.lang3.StringUtils;
 
 import java.util.Comparator;
-import java.util.List;
 
 public class Player {
     private String name;
     private int playTimeMinutes;
-    private List<Integer> playTimeHistory;
 
     public Player(String name) {
         if (StringUtils.isBlank(name)) {
@@ -37,6 +35,16 @@ public class Player {
 
 
     /**
+     * Comparator to order players alphabetically by name.
+     */
+    public static Comparator<Player> NameComparator = new Comparator<Player>() {
+        @Override
+        public int compare(Player p1, Player p2) {
+            return (p1.getName().compareTo(p2.getName()));
+        }
+    };
+
+    /**
      * Comparator to order players by play time from least to most.
      */
     public static Comparator<Player> PlayTimeComparator  = new Comparator<Player>() {
@@ -45,4 +53,8 @@ public class Player {
             return p1.getPlayTimeMinutes() - p2.getPlayTimeMinutes();
         }
     };
+
+    public String toString() {
+        return name;
+    }
 }

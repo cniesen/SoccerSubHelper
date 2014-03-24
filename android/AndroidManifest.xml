@@ -2,7 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.niesens"
     android:versionCode="1"
-    android:versionName="1.0-SNAPSHOT" >
+    android:versionName="1.0-SNAPSHOT">
 
     <uses-sdk
         android:minSdkVersion="8"
@@ -13,13 +13,14 @@
         android:icon="@drawable/icon"
         android:label="@string/app_name"
         android:theme="@style/AppTheme">
-        <activity android:name=".SoccerSubHelper" >
+        <activity android:name=".soccersubhelper.android.SoccerSubHelper">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".soccersubhelper.android.TeamRosterActivity"/>
+        <activity android:name=".soccersubhelper.android.AboutActivity" />
     </application>
 
 </manifest>

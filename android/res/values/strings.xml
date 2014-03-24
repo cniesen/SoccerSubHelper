@@ -3,7 +3,22 @@
 
     <string name="app_name">Soccer Sub Helper</string>
     <string name="hello">Hello SoccerSubHelper!</string>
-    <string name="action_settings">Settings</string>
+    <string name="add_player">Add Player</string>
+
+    <string name="action_team_roster">Team Roster</string>
+    <string name="action_about">About</string>
+
     <string name="hello_world">Hello world!</string>
+
+    <string name="edit_roster_titleSuffix">Edit Team Roster</string>
+
+    <string name="about_titleSuffix">About</string>
+    <string name="about_appInfo">Soccer Sub Helper assists the coach with player substitutions of U6 and U8 soccer games. The goal of the program is to give each player equal playing time while mixing the players as much as possible and keeping back to back plays to a minimum.</string>
+    <string name="about_donation">To encourage volunteer coaching of youth soccer teams this app is free. If you find this app extremely useful and desire to pay for it please donate to your local soccer club.</string>
+    <string name="about_legalese">No warranty of any kind are given</string>
+    <string name="about_author_label">Author:</string>
+    <string name="about_author_value">Claus Niesen</string>
+    <string name="about_url">https://github.com/cniesen/SoccerSubHelper</string>
+
 
 </resources>
